@@ -9,9 +9,9 @@ const Navbar = () => {
         <img src={Logo} alt="Logo Image" style={{ width: '50px' }} />
       </div>
 
-      {/*  */}
+      {/* Navbar */}
       <div>
-        <ul>
+        <ul className='flex'>
           <li>Home</li>
           <li>About</li>
           <li>Skills</li>
@@ -20,16 +20,22 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Work</li>
-          <li>Contact</li>
-        </ul>
+      {/* Hamburger */}
+      <div className='hidden'>
+        <Fabars />
       </div>
 
+      {/* Mobile Menu */}
+      <ul className='hidden'>
+        <li>Home</li>
+        <li>About</li>
+        <li>Skills</li>
+        <li>Work</li>
+        <li>Contact</li>
+      </ul>
+
+      {/* Social Icons */}
+      <div></div>
     </div>
   )
 }
