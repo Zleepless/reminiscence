@@ -4,7 +4,17 @@ import Logo from '../assets/34.png'
 
 const Navbar = () => {
   return (
-    <div></div>
+    <div>
+      <ul>
+        <li>Home</li>
+        <li>Work</li>
+        <li>Project</li>
+        <li>Skill</li>
+        <li>Resume</li>
+        <li>About Me</li>
+        <li>Contact</li>
+      </ul>
+    </div>
   )
 }
 
