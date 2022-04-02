@@ -1,12 +1,11 @@
-import Navbar from "./components/Navbar"
-import Testcomp from './components/Testcomp'
+import React from "react"
+import DTable from "./components/DTable"
 
 function App() {
   return (
     <div >
-      <h1 class="text-3xl font-bold underline">Helasdaslo world!</h1>
-      <Navbar />
-      <Testcomp />
+      <h1 class="text-3xl font-bold underline">Helasdasloss world!</h1>
+      <DTable />
     </div>
   )
 }
