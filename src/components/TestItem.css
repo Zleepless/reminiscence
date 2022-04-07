@@ -30,8 +30,8 @@
 .test-item__price {
   font-size: 1rem;
   font-weight: bold;
-  color: white;
-  background-color: #40005d;
+  color: rgb(0, 0, 0);
+  background-color: #81f7ff;
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
