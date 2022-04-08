@@ -1,7 +1,7 @@
 import React from 'react'
-import TestItem from './components/TestItem'
+import TestMultiItem from './components/TestMultiItem'
 
-function App() {
+function App(props) {
   const expenses = [
     {
       id: 1,
@@ -31,27 +31,8 @@ function App() {
 
   return (
     <div>
-      Test
-      <TestItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
-      />
-      <TestItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-      />
-      <TestItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
-      />
-      <TestItem
-        title={expenses[3].title}
-        amount={expenses[3].amount}
-        date={expenses[3].date}
-      />
+      <h2>Test</h2>
+      <TestMultiItem items={expenses} />
     </div>
   )
 }
