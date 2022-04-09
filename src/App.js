@@ -1,8 +1,8 @@
 import React from 'react'
-import TestMultiItem from './components/TestMultiItem'
+import TestMultiItem from './components/Test/TestMultiItem'
 
-function App(props) {
-  const expenses = [
+const App = () => {
+  const expenses = [ // Dummy Data
     {
       id: 1,
       title: 'Test1',

@@ -1,9 +1,10 @@
 import './TestMultiItem.css'
+import Card from '../UI/Card'
 import TestItem from './TestItem'
 
 const TestMultiItem = (props) => {
   return (
-    <div className='test'>
+    <Card className='test'>
       <TestItem
         title={props.items[0].title}
         amount={props.items[0].amount}
@@ -24,7 +25,7 @@ const TestMultiItem = (props) => {
         amount={props.items[3].amount}
         date={props.items[3].date}
       />
-    </div>
+    </Card>
   )
 }
 
