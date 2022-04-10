@@ -1,5 +1,6 @@
 import React from 'react'
 import TestMultiItem from './components/Test/TestMultiItem'
+import NewTest from './components/NewTest/NewTest'
 
 const App = () => {
   const expenses = [ // Dummy Data
@@ -32,6 +33,7 @@ const App = () => {
   return (
     <div>
       <h2>Test</h2>
+      <NewTest />
       <TestMultiItem items={expenses} />
     </div>
   )
