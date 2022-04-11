@@ -1,5 +1,5 @@
 .new-test {
-  background-color: #a892ee;
+  background-color: #adffe4;
   padding: 1rem;
   margin: 2rem auto;
   width: 50rem;
@@ -13,8 +13,8 @@
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
-  border: 1px solid #40005d;
-  background-color: #40005d;
+  border: 1px solid #5989a8;
+  background-color: #69c7f3;
   color: white;
   border-radius: 12px;
   margin-right: 1rem;
@@ -22,8 +22,8 @@
 
 .new-test button:hover,
 .new-test button:active {
-  background-color: #510674;
-  border-color: #510674;
+  background-color: #9cb1ad;
+  border-color: #57ffbe;
 }
 
 .new-test button.alternative {
