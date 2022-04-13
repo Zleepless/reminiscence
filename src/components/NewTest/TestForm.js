@@ -2,52 +2,47 @@ import React, { useState } from 'react'
 import './TestForm.css'
 
 const TestForm = () => {
-  // const [userInput, setUserInput] = useState({
-  //   enteredTitle: '',
-  //   enteredAmount: '',
-  //   enteredDate: '',
-  // })
-
-  const [enteredTitle, setEnteredTitle] = useState();
-  const [enteredAmouint, setEnteredAmount] = useState();
-  const [enteredDate, setEnteredDate] = useState();
+  const [enteredTitle, setEnteredTitle] = useState()
+  const [enteredAmount, setEnteredAmount] = useState()
+  const [enteredDate, setEnteredDate] = useState()
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value)
-    // setUserInput({
-    //   ...userInput,
-    //   enteredTitle: event.target.value,
-    // })
-    // setUserInput((prevState) => {
-    //   return {...prevState, enteredTitle: event.target.value }
-    // });
-    
   }
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value)
-    // setUserInput({
-    //   ...userInput,
-    //   enteredAmount: event.target.value,
-    // })
-    // setUserInput(() => {});
   }
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value)
-    // setUserInput({
-    //   ...userInput,
-    //   enteredDate: event.target.value,
-    // })
-    // setUserInput(() => {});
+  }
+
+  const submitHandler = (event) => {
+    event.preventDefault()
+
+    const testData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate)
+    }
+
+    console.log(testData)
+    setEnteredTitle('')
+    setEnteredAmount('')
+    setEnteredDate('')
   }
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-test__controls">
         <div className="new-test__control">
           <label>Title</label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+          />
         </div>
         <div className="new-test__control">
           <label>Amount</label>
@@ -55,6 +50,7 @@ const TestForm = () => {
             type="number"
             min="0.01"
             step="0.01"
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -64,6 +60,7 @@ const TestForm = () => {
             type="date"
             min="2022-04-04"
             max="2024-04-04"
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
