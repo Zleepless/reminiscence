@@ -1,9 +1,11 @@
 import React from 'react'
 import TestMultiItem from './components/Test/TestMultiItem'
 import NewTest from './components/NewTest/NewTest'
+import Dropzone from 'react-dropzone'
 
 const App = () => {
-  const expenses = [ // Dummy Data
+  const expenses = [
+    // Dummy Data
     {
       id: 1,
       title: 'Test1',
@@ -35,6 +37,16 @@ const App = () => {
       <h2>Test</h2>
       <NewTest />
       <TestMultiItem items={expenses} />
+      <Dropzone onDrop={(acceptedFiles) => console.log(acceptedFiles)}>
+        {({ getRootProps, getInputProps }) => (
+          <section>
+            <div {...getRootProps()}>
+              <input {...getInputProps()} />
+              <p>Drag 'n' drop some files here, or click to select files</p>
+            </div>
+          </section>
+        )}
+      </Dropzone>
     </div>
   )
 }
