@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <div>
-      <h2>Test</h2>
+      <h2 className='text-3xl font-bold underline'>Test</h2>
       <NewTest />
       <TestMultiItem items={expenses} />
       <DropZoneBox />
